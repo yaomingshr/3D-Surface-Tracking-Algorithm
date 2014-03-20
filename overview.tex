@@ -1,10 +1,29 @@
 \documentclass{article}
+\usepackage{clrscode}
+\usepackage{amsmath}
 
 \begin{document}
 \title{Overview: A 3D Surface Tracking Algorithm}
 \author{Yao Ming}
 \date{\today}
 \maketitle
+\newpage
+
+\section{Introduction}
+
+This algorithm constructs a surface model from edge voxels. A voxel is
+identified as being on the surface if its second derivative is negative and
+changes sign for neighbors in the gradient direction. By this definition, there
+can only exist one layer of surface voxels, and the tracking algorithm is simply
+a breadth-first search. Moreover, the definition of surface voxels is not
+sensitive to gradient directions, thus this approach is robust against
+noise. The test results on real data are also reported.
+
+\section{Surface Identification}
+
+
+\section{The Surface Tracking Algorithm}
+
 
 
 \end{document}
