@@ -4,6 +4,7 @@
 \usepackage{amssymb}
 \usepackage{latexsym}
 \usepackage{indentfirst}
+\usepackage{graphicx}
 
 \setlength{\parindent}{2em}
 \begin{document}
@@ -142,9 +143,16 @@ The inequalities (8) is the condition to identify surface voxels in a discrete
 space. Obviously, there is only one layer of voxels that will satisfy the
 condition. This makes subsequent surface tracking much easier.
 \section{The Surface Tracking Algorithm}
-After the definition of the voxel in surface, we can discuss the tracking
-algorithms.
+In this section, we can discuss the tracking algorithms based on the definition
+of the surface voxel. This algorithms extracts a single layer of surface using
+inequalities (8) and converts surface voxels to graphical primitives to
+construct a surface model. We would introduce the definition of graphics
+primitives first, which is based on the extended cuberille model.
 
+\subsection{The Extended Cuberille Model}
+
+\centerline{\includegraphics[height=3cm,width=10cm]{tt.eps}}
+\centerline{\textbf{FIG.1.}The location/direction codes for the four volume primitives}
 \begin{codebox}
   \Procname{$\proc{Surface\_Tracking}(Q\_CELL *current\_voxel)$}
   \li unsigned char index;\qquad //the table index
